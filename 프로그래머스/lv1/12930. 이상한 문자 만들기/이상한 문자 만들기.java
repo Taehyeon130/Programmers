@@ -2,6 +2,7 @@ class Solution {
     public String solution(String s) {
         
         String[] a = s.split("\\s",-1);
+        
         String[] c ={};
         StringBuffer b = new StringBuffer();
         for(int i=0;i<a.length;i++){
