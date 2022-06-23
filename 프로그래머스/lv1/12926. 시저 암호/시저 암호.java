@@ -1,16 +1,10 @@
-import java.util.*;
-
 class Solution {
     public String solution(String s, int n) {
         String answer = "";
         
-
-        char[] c = s.toCharArray(); 
-        
-        
+        char[] c = s.toCharArray();  
         int[] d = new int[c.length];
        
-    
         for(int i=0;i<c.length;i++){   
              d[i] = (int)c[i]+n;  
             
