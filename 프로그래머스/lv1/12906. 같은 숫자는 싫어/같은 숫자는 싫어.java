@@ -2,17 +2,16 @@ import java.util.*;
 
 public class Solution {
     public int[] solution(int []arr) {
-        ArrayList<Integer> tempList = new ArrayList<Integer>();
-        int preNum = 10;
-        for(int num : arr) {
-            if(preNum != num)
-                tempList.add(num);
-            preNum = num;
-        }       
-        int[] answer = new int[tempList.size()];
-        for(int i=0; i<answer.length; i++) {
-            answer[i] = tempList.get(i).intValue();
+        for(int i=0;i<arr.length-1;i++){
+            if(arr[i] == arr[i+1]){     
+                arr[i] = -1;
+            }
         }
+        
+        int[] answer = Arrays.stream(arr)
+                            .filter(i -> i != -1)
+                            .toArray();
+
         return answer;
     }
 }
