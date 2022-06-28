@@ -1,21 +1,18 @@
 import java.util.*;
-import java.util.stream.Collectors;
-
 
 public class Solution {
     public int[] solution(int []arr) {
-                
-        for(int i=0;i<arr.length-1;i++){
-            if(arr[i] == arr[i+1]){     
-                arr[i] = -1;
-            }
+        ArrayList<Integer> tempList = new ArrayList<Integer>();
+        int preNum = 10;
+        for(int num : arr) {
+            if(preNum != num)
+                tempList.add(num);
+            preNum = num;
+        }       
+        int[] answer = new int[tempList.size()];
+        for(int i=0; i<answer.length; i++) {
+            answer[i] = tempList.get(i).intValue();
         }
-        
-        //리스트를 배열로
-        int[] answer = Arrays.stream(arr)
-                            .filter(i -> i != -1)
-                            .toArray();
-
         return answer;
     }
 }
