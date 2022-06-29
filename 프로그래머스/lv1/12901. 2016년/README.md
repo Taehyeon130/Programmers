@@ -1,10 +1,10 @@
 # [level 1] 2016년 - 12901 
 
-[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12901#) 
+[문제 링크](https://programmers.co.kr/learn/courses/30/lessons/12901) 
 
 ### 성능 요약
 
-메모리: 79.2 MB, 시간: 1.05 ms
+메모리: 74 MB, 시간: 0.02 ms
 
 ### 구분
 
