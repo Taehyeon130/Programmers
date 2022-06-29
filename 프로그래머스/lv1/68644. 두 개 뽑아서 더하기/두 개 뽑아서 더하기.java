@@ -1,32 +1,16 @@
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.HashSet;
+import java.util.Set;
 
 class Solution {
-    public int[] solution(int[] numbers) {
-        int[] answer = {};
+     public int[] solution(int[] numbers) {
+        Set<Integer> set = new HashSet<>();
 
-        List<Integer> list = new ArrayList<Integer>();        
-        
-        for(int i=0;i<numbers.length;i++){
-            for(int j=i+1;j<numbers.length;j++){
-                int sum = numbers[i] + numbers[j];
-                list.add(sum);
-                //System.out.println(numbers[i] +"+" + numbers[j] +"="+sum);
+        for(int i=0; i<numbers.length; i++) {
+            for(int j=i+1; j<numbers.length; j++) {
+                set.add(numbers[i] + numbers[j]);
             }
         }
-        
-        
-        
-        List<Integer>lists = list.stream().distinct().collect(Collectors.toList());
-        
-        
-        lists.sort(Comparator.naturalOrder());
-        
-        answer = lists.stream()
-                    .mapToInt(i -> i)
-                    .toArray();
-        
-        System.out.println(lists);
-        return answer;
+
+        return set.stream().sorted().mapToInt(Integer::intValue).toArray();
     }
 }
