@@ -5,9 +5,9 @@ class Solution {
         Arrays.sort(lost);
         Arrays.sort(reserve);
     
-        int answer = n;
+        int answer = n-lost.length;
      
-        answer = n-lost.length;
+     
         
         //도난당했지만 여분이 있는 경우
         for(int i=0;i<lost.length;i++){
