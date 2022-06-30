@@ -15,8 +15,11 @@ class Solution {
         }
         
         List<Integer>lists = list.stream().distinct().collect(Collectors.toList());
-        
         lists.sort(Comparator.naturalOrder());
+        
+        //Set<Integer> set = new HashSet<Integer>(list);
+        
+        //List<Integer>lists = new ArrayList<Integer>(set);
         
         answer = lists.stream()
                     .mapToInt(i -> i)
