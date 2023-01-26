@@ -1,11 +1,11 @@
 import java.util.*;
 
 class Solution {
-    public long solution(String t, String p) {
+    public int solution(String t, String p) {
         int pl = p.length();
         int tl = t.length();
-        //long으로 해야함
-        long answer = 0;
+        
+        int answer = 0;
         long cnt = 0;
         
         while(pl+cnt <= tl){
@@ -15,6 +15,7 @@ class Solution {
                 if(Long.parseLong(com) <= Long.parseLong(p)){
                     answer++;            
                 }   
+            
             cnt++;
         }
         return answer;
