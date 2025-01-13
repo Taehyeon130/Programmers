@@ -2,18 +2,19 @@ class Solution {
     boolean solution(String s) {
         boolean answer = true;
         
-        String[] c = String.valueOf(s).split("");
-        int p =0;
-        int y = 0;
-        for(int i=0;i<c.length;i++){
-            if(c[i].equalsIgnoreCase("p")){
-                p +=1;
-            }else if(c[i].equalsIgnoreCase("y")){
-                y +=1;
+        String[] sArr = s.split("");
+        int pCnt =0;
+        int yCnt = 0;
+        
+        for(int i=0;i<sArr.length;i++){
+            if(sArr[i].equalsIgnoreCase("p")){
+                pCnt +=1;
+            }else if(sArr[i].equalsIgnoreCase("y")){
+                yCnt +=1;
             }
         }
         
-        if(p!=y){
+        if(pCnt!=yCnt){
             answer=false;
         }
 
