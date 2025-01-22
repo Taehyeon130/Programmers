@@ -2,7 +2,6 @@ import java.util.*;
 import java.lang.*;
 import java.io.*;
 
-// The main method must be in a class named "Main".
 class Main {
     public static void main(String[] args) throws IOException{
        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -11,7 +10,8 @@ class Main {
         
         //재료의 갯수
         int N = Integer.parseInt(br.readLine());
-int useM = N-1;
+        int useM = N-1;
+        
         HashMap<String,Integer> map = new HashMap<>();
         st = new StringTokenizer(br.readLine());
         
